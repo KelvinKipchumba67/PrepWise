@@ -17,7 +17,7 @@ export default function DashboardClient({ initialPlans = [] }: { initialPlans?: 
         if (!newPlan) return;
 
         setPlans(prevPlans => [newPlan, ...prevPlans]);
-        setSelectedSubject(newPlan.subject);
+        setSelectedSubject(newPlan.subject ?? "All");
     }
     const handleLogout = async () => {
         try {

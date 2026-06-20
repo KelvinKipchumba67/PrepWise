@@ -26,6 +26,7 @@ export default function StudyForm({
     try {
       const generateRes = await fetch("/api/generate", {
         method: "POST",
+        credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ plan }),
       });
@@ -36,6 +37,7 @@ export default function StudyForm({
       const generatedSchedule = generateData.subplan;
       const saveRes = await fetch("/api/plans", {
         method: "POST",
+        credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           subject: fd.get("subject"),
@@ -51,7 +53,8 @@ export default function StudyForm({
           saveData.error || "Plan generated, but failed to save to database.",
         );
       }
-      onPlanGenerated(generatedSchedule);
+      const saveData = await saveRes.json().catch(() => ({}));
+      onPlanGenerated(saveData.plan ?? { schedule: generatedSchedule });
     } catch (err: any) {
       setError(err.message || "Failed to generate plan.");
     } finally {
