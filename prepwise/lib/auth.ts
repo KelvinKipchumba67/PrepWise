@@ -15,7 +15,7 @@ type TokenPayload = {
 	exp?: number;
 };
 
-const secret = process.env.AUTH_SECRET || process.env.JWT_SECRET || "prepwise-secret";
+const secret = process.env.AUTH_SECRET || process.env.JWT_SECRET || process.env.JWT_TOKEN || "prepwise-secret";
 
 function base64UrlEncode(value: string) {
 	return Buffer.from(value).toString("base64url");
