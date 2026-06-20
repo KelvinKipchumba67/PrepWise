@@ -9,8 +9,6 @@ export async function POST(req: NextRequest) {
         if (!token) {
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
         }
-
-        // 2. We use verifyToken to unlock the cookie and get the user ID
         const payload = await verifyToken(token);
         const userId = payload.sub as string;
 
