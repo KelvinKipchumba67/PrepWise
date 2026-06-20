@@ -55,7 +55,7 @@ export default async function PlansPage() {
           </div>
         ) : (
           <div className="space-y-12">
-            {savedPlans.map((plan) => (
+            {savedPlans.map((plan:any) => (
               <div key={plan.id} className="relative">
                 {/* Plan Metadata Header */}
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
