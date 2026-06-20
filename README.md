@@ -16,7 +16,7 @@ PrepWise is an AI-powered study planner that helps students build personalized r
 - **Simple User Experience**  
   Lightweight and easy-to-use interface for quick planning.
 
-## 🧠 How It Works
+## How It Works
 
 1. Enter your **subject**.
 2. Add the **topics** you want to study.
@@ -24,7 +24,7 @@ PrepWise is an AI-powered study planner that helps students build personalized r
 4. PrepWise generates a structured, personalized study plan.
 5. Save and revisit your plan anytime.
 
-## 🚀 Use Cases
+## Use Cases
 
 - Students preparing for school or university exams
 - Learners who need structured revision timelines
