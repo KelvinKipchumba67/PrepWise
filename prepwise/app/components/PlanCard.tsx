@@ -6,7 +6,8 @@ interface PlanData{
         tasks: string[];
     }
 }
-export default function PlanCard({plan}:{plan:PlanData}){
+export default function PlanCard({ plan }: { plan: any }) {
+    const planDays = plan?.days || plan?.schedule?.days || plan?.schedule || [];
     return (
         <div className="space-y-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -14,12 +15,12 @@ export default function PlanCard({plan}:{plan:PlanData}){
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
-                {plan.days.map((day, idx) => (
+                {planDays.map((day: any, idx: number) => (
                     <div key={idx} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                         <h3 className="font-bold text-blue-600">{day.day}</h3>
                         <p className="mb-3 text-sm font-medium text-slate-900">{day.focus}</p>
                         <ul className="space-y-2">
-                            {day.tasks.map((task, i) => (
+                            {day.topics?.map((task: string, i: number) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
                                     <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span>
                                     {task}
