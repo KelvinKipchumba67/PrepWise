@@ -16,7 +16,7 @@ export async function POST (req: NextRequest){
         const action = req.nextUrl.searchParams.get("action");
         if (action === "logout"){
             const res = NextResponse.redirect(new
-            URL("/auth", req.url));
+            URL("/", req.url));
             res.cookies.set({...cookieOptions, maxAge:0, value:""});
             return res;
         }
