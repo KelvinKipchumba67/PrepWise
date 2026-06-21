@@ -84,7 +84,7 @@ export default function Footer() {
                     <Link
                         key={link}
                         href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
-                        style={{ color: "#111111", fontWeight: 500, fontSize: "1.1rem", textDecoration: "none" }}
+                        style={{ color: "white", fontWeight: 500, fontSize: "1.1rem", textDecoration: "none" }}
                     >
                         {link}
                     </Link>
