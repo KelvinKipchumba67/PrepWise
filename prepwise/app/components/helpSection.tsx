@@ -97,7 +97,7 @@ export default function SupportPage() {
 
                             {status === "success" && (
                                 <p style={{ color: "#4ade80", marginBottom: "1rem" }}>
-                                    Message sent successfully!
+                                    Message sent successfully
                                 </p>
                             )}
                             {status === "error" && (
