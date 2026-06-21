@@ -24,3 +24,60 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+
+/*effects*/
+.features-circle-effects {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.features-circle-effects:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), inset -8px 0 16px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Join Now button */
+.join-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.join-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  background-color: #f0f0f0 !important;
+}
+
+.join-btn:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Get Started / Join Now navbar button */
+.hero-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  background-color: #475569 !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.hero-btn:active {
+  transform: translateY(0px);
+}
+
+/* Navbar Join Now */
+.nav-join-btn {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-join-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
