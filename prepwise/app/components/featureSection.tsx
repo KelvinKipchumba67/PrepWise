@@ -10,7 +10,7 @@ export default function FeatureSection() {
             style={{ backgroundColor: "#F5E06E", color: "#111111" }}
             className="w-full py-24 px-6 flex flex-col items-center text-center"
         >
-            <p style={{ color: "#374151", fontSize: "0.875rem", letterSpacing: "0.05em", marginBottom: "1rem", margin:"20px" }}>
+            <p className="features-heading" style={{ color: "#374151", fontSize: "0.875rem", letterSpacing: "0.05em", marginBottom: "1rem", margin:"20px" }}>
                 Features Galore
             </p>
             <h2 style={{ color: "#111111", fontSize: "3.75rem", fontWeight: 800, marginBottom: "1rem" }}>
@@ -19,15 +19,15 @@ export default function FeatureSection() {
             <p style={{ color: "#374151", fontSize: "1rem", marginBottom: "4rem", maxWidth: "28rem" }}>
                 A planner that adapts to your craziness with study schedules!
             </p>
-            <div style={{ display: "flex", flexDirection: "row", gap: "1.5rem", marginBottom: "4rem" }}>
+            <div className="features-circles" style={{ display: "flex", flexDirection: "row", gap: "1.5rem", marginBottom: "4rem" }}>
                 {features.map((feature) => (
                     <div
                         key={feature}
+                        className="features-circle-effects features-circles"
                         style={{
                             width: "200px",
                             height: "200px",
                             borderRadius: "50%",
-                            border: "1.5px solid #111",
                             backgroundColor: "#ffffff",
                             boxShadow: "inset -8px 0 16px rgba(0,0,0,0.18)",
                             display: "flex",
@@ -44,6 +44,7 @@ export default function FeatureSection() {
             </div>
             <Link href="/auth">
                 <button
+                    className="join-btn"
                     style={{
                         backgroundColor: "#ffffff",
                         color: "#1f2937",
