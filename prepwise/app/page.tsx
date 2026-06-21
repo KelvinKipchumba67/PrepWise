@@ -29,6 +29,7 @@ export default async function LandingPage() {
               }}
           >
               <div
+                  className="hero-content"
                   style={{
                       position: "absolute",
                       bottom: "4rem",
@@ -41,6 +42,7 @@ export default async function LandingPage() {
                   }}
               >
                   <h1
+                      className="hero-heading"
                       style={{
                           fontSize: "5rem",
                           fontWeight: 900,
@@ -55,6 +57,7 @@ export default async function LandingPage() {
                   </h1>
 
                   <p
+                      className="hero-subtext"
                       style={{
                           fontSize: "1.25rem",
                           fontWeight: 300,
@@ -69,6 +72,7 @@ export default async function LandingPage() {
 
                   <Link
                       href="/auth"
+                      className="hero-btn"
                       style={{
                           backgroundColor: "#334155",
                           color: "#ffffff",
