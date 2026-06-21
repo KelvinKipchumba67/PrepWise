@@ -16,8 +16,6 @@ export default async function LandingPage() {
   return (
       <div className="bg-white">
         <Navbar />
-
-        {/* Bypassing Tailwind's flex engine with direct inline styles */}
           <main
               style={{
                   position: "relative",
