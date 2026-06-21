@@ -37,7 +37,7 @@ export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
                 ) : (
                     <Link
                         href="/auth"
-                        style={{ backgroundColor: "#9333ea", color: "#ffffff" }}
+                        style={{ backgroundColor: "#0a1a0a", color: "#ffffff" }}
                         className="nav-join-btn rounded-full px-8 py-3.5 text-base font-bold shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
                     >
                         Join Now
