@@ -17,7 +17,7 @@ export default function FeatureSection() {
                 Awesome Features
             </h2>
             <p style={{ color: "#374151", fontSize: "1rem", marginBottom: "4rem", maxWidth: "28rem" }}>
-                A planner that adapts to your craziness with study schedules!
+                A planner that adapts to your craziness with study schedules
             </p>
             <div className="features-circles" style={{ display: "flex", flexDirection: "row", gap: "1.5rem", marginBottom: "4rem" }}>
                 {features.map((feature) => (
@@ -28,7 +28,7 @@ export default function FeatureSection() {
                             width: "200px",
                             height: "200px",
                             borderRadius: "50%",
-                            backgroundColor: "#ffffff",
+                            backgroundColor: "#0a1a0a",
                             boxShadow: "inset -8px 0 16px rgba(0,0,0,0.18)",
                             display: "flex",
                             alignItems: "center",
@@ -36,7 +36,7 @@ export default function FeatureSection() {
                             flexShrink: 0,
                         }}
                     >
-            <span style={{ color: "#1f2937", fontSize: "1rem", fontWeight: 500 }}>
+            <span style={{ color: "white", fontSize: "1rem", fontWeight: 500 }}>
               {feature}
             </span>
                     </div>
@@ -46,8 +46,8 @@ export default function FeatureSection() {
                 <button
                     className="join-btn"
                     style={{
-                        backgroundColor: "#ffffff",
-                        color: "#1f2937",
+                        backgroundColor: "#0a1a0a",
+                        color: "white",
                         fontWeight: 600,
                         padding: "0.75rem 2rem",
                         borderRadius: "9999px",
