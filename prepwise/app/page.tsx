@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { cookieOptions } from "@/lib/auth";
 import FeatureSection from "@/app/components/featureSection";
 import Footer from "@/app/components/footerSection";
+import HelpSection from "@/app/components/helpSection";
 
 export default async function LandingPage() {
   const cookieStore = await cookies();
@@ -21,7 +22,7 @@ export default async function LandingPage() {
                   position: "relative",
                   minHeight: "100vh",
                   paddingTop: "120px",
-                  backgroundColor: "#0f172a",
+                  backgroundColor: "#0a1a0a",
                   backgroundImage: `linear-gradient(to bottom right, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.7)), url('/hero-bg.jpg')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -89,6 +90,7 @@ export default async function LandingPage() {
               </div>
           </main>
           <FeatureSection />
+          <HelpSection />
           <Footer/>
       </div>
   );
