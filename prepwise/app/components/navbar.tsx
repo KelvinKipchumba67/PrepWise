@@ -10,7 +10,7 @@ export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
         <div
               style={{ backgroundColor: "rgba(255, 255, 255, 0.95)" }}
         >
-            <nav className="mx-auto max-w-7xl w-full rounded-full bg-white/70 backdrop-blur-md px-10 py-5 flex items-center justify-between shadow-lg">
+            <nav className="nav-wrapper  mx-auto max-w-7xl w-full  bg-white/70 backdrop-blur-md px-10 py-5 flex items-center justify-between shadow-lg">
                 <Link href="/" className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal-800 border border-slate-200">
                         <span className="text-xl font-bold text-white">P</span>
@@ -20,16 +20,16 @@ export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
                     </span>
                 </Link>
 
-                <div className="flex items-center gap-8">
-                    <Link href="/features" className="text-base font-medium text-slate-700 hover:text-slate-900 transition-colors">
-                        Features
-                    </Link>
-                    <Link href="/team" className="text-base font-medium text-slate-700 hover:text-slate-900 transition-colors">
-                        Team
-                    </Link>
-                    <Link href="/news" className="text-base font-medium text-slate-700 hover:text-slate-900 transition-colors">
-                        News
-                    </Link>
+                <div className="nav-links flex items-center gap-8">
+                    {/*<Link href="/features" className="text-base font-medium text-slate-700 hover:text-slate-900 transition-colors">*/}
+                    {/*    Features*/}
+                    {/*</Link>*/}
+                    {/*<Link href="/team" className="text-base font-medium text-slate-700 hover:text-slate-900 transition-colors">*/}
+                    {/*    Team*/}
+                    {/*</Link>*/}
+                    {/*<Link href="/news" className="text-base font-medium text-slate-700 hover:text-slate-900 transition-colors">*/}
+                    {/*    News*/}
+                    {/*</Link>*/}
                 </div>
 
                 {showLogout ? (
@@ -38,7 +38,7 @@ export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
                     <Link
                         href="/auth"
                         style={{ backgroundColor: "#9333ea", color: "#ffffff" }}
-                        className="rounded-full px-8 py-3.5 text-base font-bold shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                        className="nav-join-btn rounded-full px-8 py-3.5 text-base font-bold shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
                     >
                         Join Now
                     </Link>
