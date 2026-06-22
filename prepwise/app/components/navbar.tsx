@@ -66,7 +66,10 @@ function LogoutButton() {
     return (
         <button
             onClick={handleLogout}
-            className="rounded-full border border-slate-200 bg-white px-8 py-3.5 text-base font-medium text-slate-600 shadow-sm transition-colors hover:bg-slate-50 hover:text-red-600"
+            className="rounded-full border border-slate-200 px-8 py-3.5 text-base font-medium text-slate-600 shadow-sm transition-colors hover:bg-slate-50 hover:text-red-600"
+            style={{ backgroundColor: "#0a1a0a", color: "#ffffff" }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#132613"}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#0a1a0a"}
         >
             Log out
         </button>
