@@ -42,7 +42,7 @@ export default function DashboardClient({
         <header className="mb-12 flex items-start justify-between">
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-slate-900">
-              PrepWise Dashboard
+              Prep Dashboard
             </h1>
             <p className="text-slate-600">
               Enter your syllabus and let AI map out your success.
