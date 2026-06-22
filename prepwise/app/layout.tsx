@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PrepWise",
+  title: "Prep",
   description: "PrepWise a study planner",
 };
 
