@@ -102,7 +102,7 @@ export default function Footer() {
             </div>
 
             <p style={{ color: "#374151", fontSize: "0.875rem", margin:"20px" }}>
-                © 2026 PrepWise Lite. All rights reserved.
+                © 2026 Prep Lite. All rights reserved.
             </p>
         </footer>
     );
