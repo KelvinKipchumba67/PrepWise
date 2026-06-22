@@ -65,7 +65,7 @@ export default function AuthPage() {
             Hi there
           </h2>
           <p className="mt-4 text-slate-600 ">
-            Welcome to PrepWise. AI-Powered Study Dashboard
+            Welcome to Prep. AI-Powered Study Dashboard
           </p>
           {/* Google Sign In Button */}
           <button
