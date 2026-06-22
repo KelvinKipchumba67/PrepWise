@@ -6,6 +6,7 @@ import { cookieOptions } from "@/lib/auth";
 import FeatureSection from "@/app/components/featureSection";
 import Footer from "@/app/components/footerSection";
 import HelpSection from "@/app/components/helpSection";
+import MarqueeSection from "@/app/components/marquee";
 
 export default async function LandingPage() {
   const cookieStore = await cookies();
@@ -90,6 +91,7 @@ export default async function LandingPage() {
               </div>
           </main>
           <FeatureSection />
+          <MarqueeSection />
           <HelpSection />
           <Footer/>
       </div>
