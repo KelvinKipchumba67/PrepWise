@@ -13,7 +13,7 @@ export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
             <nav className="nav-wrapper  mx-auto max-w-7xl w-full  bg-white/70 backdrop-blur-md px-10 py-5 flex items-center justify-between shadow-lg">
                 <Link href="/" className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal-800 border border-slate-200">
-                        <span className="text-xl font-bold text-white">P</span>
+                        <span className="text-xl font-bold text-black">P</span>
                     </div>
                     <span className="text-xl font-bold tracking-tight text-slate-900">
                         PrepWise
