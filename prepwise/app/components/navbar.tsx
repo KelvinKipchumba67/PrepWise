@@ -16,7 +16,7 @@ export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
                         <span className="text-xl font-bold text-black">P</span>
                     </div>
                     <span className="text-xl font-bold tracking-tight text-slate-900">
-                        PrepWise
+                        Prep
                     </span>
                 </Link>
 
