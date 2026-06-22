@@ -56,7 +56,7 @@ export default function AuthPage() {
       <div className="flex w-full flex-col justify-center px-8 md:w-1/2 md:px-16 lg:px-24">
         <div className="absolute left-8 top-8 md:left-16 lg:left-24">
           <h1 className="text-2xl font-bold tracking-tighter text-slate-900">
-            PREPWISE.
+            PREP.
           </h1>
         </div>
 
