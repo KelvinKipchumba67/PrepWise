@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { cookieOptions } from "@/lib/auth";
 import FeatureSection from "@/app/components/featureSection";
 import Footer from "@/app/components/footerSection";
-import HelpSection from "@/app/components/helpSection";
+import HelpSection from "@/app/components/support";
 import MarqueeSection from "@/app/components/marquee";
 
 export default async function LandingPage() {
