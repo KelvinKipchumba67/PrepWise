@@ -9,7 +9,7 @@ interface NavbarProps {
 export default function PrepWiseNavbar({ showLogout = false }: NavbarProps) {
     return (
         <header className="w-full bg-white shadow-sm border-b border-gray-100">
-            <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+            <nav className="flex w-full items-center justify-between px-6 py-4 lg:px-10">
                 <Link href="/" className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white">
                         <span className="text-xl font-bold text-slate-900">P</span>
