@@ -1,24 +1,22 @@
 import Navbar from "./components/navbar";
 import Link from "next/link";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import { cookieOptions } from "@/lib/auth";
 import FeatureSection from "@/app/components/featureSection";
 import Footer from "@/app/components/footerSection";
 import HelpSection from "@/app/components/support";
 import MarqueeSection from "@/app/components/marquee";
+import AboutSection from "@/app/components/AboutSection";
 
 export default async function LandingPage() {
   const cookieStore = await cookies();
   const token = cookieStore.get(cookieOptions.name || "token")?.value;
-  if (token) {
-    redirect("/dashboard");
-  }
+  const isLoggedIn = Boolean(token);
 
   return (
       <div className="bg-white">
         <Navbar />
-          <main
+          <main id="home"
               style={{
                   position: "relative",
                   minHeight: "100vh",
@@ -28,6 +26,7 @@ export default async function LandingPage() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
+                  scrollMarginTop: "80px",
               }}
           >
               <div
@@ -73,10 +72,10 @@ export default async function LandingPage() {
                   </p>
 
                   <Link
-                      href="/auth"
+                      href={isLoggedIn ? "/dashboard" : "/auth"}
                       className="hero-btn"
                       style={{
-                          backgroundColor: "#334155",
+                          backgroundColor: isLoggedIn ? "#2563eb" : "#334155",
                           color: "#ffffff",
                           borderRadius: "9999px",
                           padding: "1rem 2.5rem",
@@ -86,14 +85,25 @@ export default async function LandingPage() {
                           boxShadow: "0 20px 25px rgba(0,0,0,0.3)",
                       }}
                   >
-                      Get Started
+                      {isLoggedIn ? "Go to Dashboard" : "Get Started"}
                   </Link>
               </div>
           </main>
-          <FeatureSection />
+          <section id="features" style={{ scrollMarginTop: "80px" }}>
+              <FeatureSection />
+          </section>
+
           <MarqueeSection />
-          <HelpSection />
-          <Footer/>
+
+          <section id="about" style={{ scrollMarginTop: "80px" }}>
+              <AboutSection isLoggedIn={isLoggedIn} />
+          </section>
+
+          <section id="support" style={{ scrollMarginTop: "80px" }}>
+              <HelpSection />
+          </section>
+
+          <Footer />
       </div>
   );
 }
