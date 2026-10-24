@@ -35,28 +35,6 @@ PrepWise is an AI-powered study planner that helps students build personalized r
 - Database: Supabase
 - AI Integration: Groq API
 
-## Installation
-### Clone the repository
-### git clone https://github.com/KelvinKipchumba67/PrepWise.git
-
-### Navigate into the project
-### cd PrepWise
-
-### Install dependencies
-npm install
-
-### Start development server
-npm run dev
-
-## Environment Variables
-
-Create a `.env` file in the project root and add required values:
-
-# Example
-GROQ_API_KEY=your_api_key_here
-DATABASE_URL=your_database_url_here
-JWT_TOKEN=your_jwt_token_here
-
 ## Project Structure
 
 
