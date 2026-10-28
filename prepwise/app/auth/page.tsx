@@ -54,11 +54,14 @@ export default function AuthPage() {
   return (
     <div className="flex min-h-screen w-full bg-[#F8F9FA]">
       <div className="flex w-full flex-col justify-center px-8 md:w-1/2 md:px-16 lg:px-24">
-        <div className="absolute left-8 top-8 md:left-16 lg:left-24">
-          <h1 className="text-2xl font-bold tracking-tighter text-slate-900">
-            PREP.
-          </h1>
-        </div>
+          <div className="absolute left-8 top-8 flex items-center gap-3 md:left-16 lg:left-24">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white">
+                  <span className="text-xl font-bold text-slate-900">P</span>
+              </div>
+              <h1 className="text-xl font-bold tracking-tighter text-slate-900">
+                  Prep
+              </h1>
+          </div>
 
         <div className="mx-auto w-full max-w-md pt-16">
           <h2 className="text-5xl font-extrabold tracking-tight text-slate-900">
