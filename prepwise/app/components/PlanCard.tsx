@@ -5,7 +5,7 @@ export default function PlanCard({ plan }: { plan: any }) {
     const planDays = normalizedPlan?.days || [];
 
     return (
-        <div className="space-y-5">
+        <div className="min-w-0 space-y-5">
             {/* Title card */}
             <div className="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4">
                 <div className="flex min-w-0 items-center gap-3">
@@ -22,7 +22,7 @@ export default function PlanCard({ plan }: { plan: any }) {
             </div>
 
             {/* Day cards */}
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {planDays.map((day: any, idx: number) => {
                     const tasks: string[] = day.tasks || day.topics || [];
                     return (
@@ -49,7 +49,7 @@ export default function PlanCard({ plan }: { plan: any }) {
                                             key={i}
                                             className="flex items-start gap-2.5 text-sm text-slate-600"
                                         >
-                                            <span className="mt-0.5 block h-4 w-4 shrink-0 rounded-full border-2 border-slate-300" />
+                                            <span className="min-w-0 break-words mt-0.5 block h-4 w-4 shrink-0 rounded-full border-2 border-slate-300" />
                                             {task}
                                         </li>
                                     ))}
