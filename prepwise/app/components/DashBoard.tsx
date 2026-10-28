@@ -196,9 +196,9 @@ export default function DashboardClient({
                 </div>
               </header>
 
-              <div className="grid gap-6 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
                 {/* Form card */}
-                <div className="h-fit lg:col-span-1">
+                <div className="h-fit min-w-0 lg:col-span-1">
                   <StudyForm
                       onPlanGenerated={handleNewPlan}
                       setGlobalLoading={setLoading}
