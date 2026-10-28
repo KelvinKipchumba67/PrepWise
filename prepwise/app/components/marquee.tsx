@@ -1,5 +1,11 @@
 'use client'
 import { useEffect, useRef } from "react";
+import Image from "next/image";
+const images = [
+    "/assets/images/study1.jpg",
+    "/assets/images/study2.jpg",
+    "/assets/images/study3.jpg",
+];
 
 export default function MarqueeSection() {
     return (
@@ -8,25 +14,17 @@ export default function MarqueeSection() {
             {/* Image Marquee */}
             <div style={{ overflow: "hidden", marginBottom: "2rem" }}>
                 <div className="marquee-track">
-                    {[
-                        "/assets/images/study1.jpg",
-                        "/assets/images/study2.jpg",
-                        "/assets/images/study3.jpg",
-                        "/assets/images/study1.jpg",
-                        "/assets/images/study2.jpg",
-                        "/assets/images/study3.jpg",
-                    ].map((src, i) => (
+                    {[...images, ...images].map((src, i) => (
                         <div key={i} className="marquee-item">
-                            <img
+                            <Image
                                 src={src}
-                                alt={`study ${i}`}
-                                style={{
-                                    width: "350px",
-                                    height: "220px",
-                                    objectFit: "cover",
-                                    borderRadius: "1rem",
-                                    flexShrink: 0,
-                                }}
+                                alt={`Study scene ${(i % images.length) + 1}`}
+                                width={350}
+                                height={220}
+                                sizes="350px"
+                                priority={i < 3}
+                                className="rounded-2xl object-cover"
+                                style={{ width: 350, height: 220, flexShrink: 0 }}
                             />
                         </div>
                     ))}
