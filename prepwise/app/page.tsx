@@ -6,6 +6,7 @@ import FeatureSection from "@/app/components/featureSection";
 import Footer from "@/app/components/footerSection";
 import HelpSection from "@/app/components/support";
 import MarqueeSection from "@/app/components/marquee";
+import Image from "next/image";
 import AboutSection from "@/app/components/AboutSection";
 
 export default async function LandingPage() {
@@ -16,19 +17,44 @@ export default async function LandingPage() {
   return (
       <div className="bg-white">
         <Navbar />
-          <main id="home"
-              style={{
-                  position: "relative",
-                  minHeight: "100vh",
-                  paddingTop: "120px",
-                  backgroundColor: "#0a1a0a",
-                  backgroundImage: `linear-gradient(to bottom right, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.7)), url('/hero-bg.jpg')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  scrollMarginTop: "80px",
-              }}
-          >
+          <main id="home">
+              <section
+                  style={{
+                      position: "relative",
+                      minHeight: "100vh",
+                      paddingTop: "120px",
+                      backgroundColor: "#0a1a0a",
+                      scrollMarginTop: "80px",
+                      overflow: "hidden",
+                  }}
+              >
+                  {/* Background image */}
+                  <Image
+                      src="/hero-bg.jpg"
+                      alt=""
+                      fill
+                      priority
+                      sizes="100vw"
+                      quality={70}
+                      className="object-cover object-center"
+                  />
+
+                  {/* Gradient overlay */}
+                  <div
+                      style={{
+                          position: "absolute",
+                          inset: 0,
+                          background:
+                              "linear-gradient(to bottom right, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.7))",
+                      }}
+                  />
+
+                  {/* Your content: needs to sit above the layers */}
+                  <div style={{ position: "relative", zIndex: 1 }}>
+                      {/* hero content here */}
+                  </div>
+              </section>
+
               <div
                   className="hero-content"
                   style={{
